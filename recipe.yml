@@ -65,7 +65,8 @@ stages:
   - name: update grub config
     type: shell
     commands:
-    - update-grub
+    - bootctl update
+    - kernel-install add 6.10.10-surface-1 /boot/vmlinuz-6.10.10-surface-1
 
   - name: enable surface-dtx-daemon
     type: shell
